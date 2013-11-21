@@ -55,7 +55,7 @@ module RailsAdmin
         # preload entire associated collection (per associated_collection_scope) on load
         # Be sure to set limit in associated_collection_scope if set is large
         register_instance_option :associated_collection_cache_all do
-          @associated_collection_cache_all ||= (associated_model_config.abstract_model.count < 100)
+          @associated_collection_cache_all ||= (associated_model_config.abstract_model.count < 10000)
         end
 
         # Reader for the association's child model's configuration
